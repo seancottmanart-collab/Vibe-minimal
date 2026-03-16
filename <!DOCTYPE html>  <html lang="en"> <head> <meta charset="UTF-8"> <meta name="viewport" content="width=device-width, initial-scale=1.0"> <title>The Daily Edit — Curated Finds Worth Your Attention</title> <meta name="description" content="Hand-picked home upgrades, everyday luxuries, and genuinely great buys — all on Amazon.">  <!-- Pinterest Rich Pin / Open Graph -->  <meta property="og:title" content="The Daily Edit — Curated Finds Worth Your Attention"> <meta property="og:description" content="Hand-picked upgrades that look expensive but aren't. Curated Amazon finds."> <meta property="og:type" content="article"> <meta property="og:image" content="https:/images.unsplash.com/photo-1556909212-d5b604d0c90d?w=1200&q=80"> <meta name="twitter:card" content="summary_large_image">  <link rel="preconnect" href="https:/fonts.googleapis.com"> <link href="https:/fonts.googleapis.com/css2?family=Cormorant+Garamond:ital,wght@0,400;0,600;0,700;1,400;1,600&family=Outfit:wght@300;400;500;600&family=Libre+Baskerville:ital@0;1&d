@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Daily Edit — Curated Finds Worth Your Attention</title>
+<meta name="description" content="Hand-picked home upgrades, everyday luxuries, and genuinely great buys — all on Amazon.">
+
+<!-- Pinterest Rich Pin / Open Graph -->
+
+<meta property="og:title" content="The Daily Edit — Curated Finds Worth Your Attention">
+<meta property="og:description" content="Hand-picked upgrades that look expensive but aren't. Curated Amazon finds.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink:       #111010;
+  --deep:      #1E1C1A;
+  --body:      #3A3835;
+  --muted:     #7A756F;
+  --hairline:  #E2DDD7;
+  --cream:     #F8F4EE;
+  --warm:      #FDFAF6;
+  --gold:      #B8862E;
+  --gold-lt:   #E4C97E;
+  --gold-bg:   #FAF4E6;
+  --red:       #C0392B;
+  --tag-green: #2D6A4F;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--warm);
+  color: var(--body);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+/* ─── MASTHEAD ─── */
+.masthead {
+  background: var(--ink);
+  text-align: center;
+  padding: 10px 5vw;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-lt);
+}
+
+nav {
+  position: sticky; top: 0; z-index: 200;
+  background: var(--warm);
+  border-bottom: 1px solid var(--hairline);
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 62px;
+  box-shadow: 0 1px 12px rgba(0,0,0,0.04);
+}
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-brand span { color: var(--gold); }
+.nav-cats {
+  display: flex; gap: 0; list-style: none; align-items: center;
+}
+.nav-cats li a {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 4px 14px;
+  border-radius: 2px;
+  transition: color .2s, background .2s;
+  white-space: nowrap;
+}
+.nav-cats li a:hover { color: var(--ink); background: var(--cream); }
+.nav-cta {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--gold-lt);
+  padding: 8px 16px;
+  border-radius: 2px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .2s;
+}
+.nav-cta:hover { background: var(--deep); }
+
+/* ─── HERO ─── */
+.hero {
+  background: var(--ink);
+  color: var(--cream);
+  padding: 64px 5vw 56px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 60% 0%, rgba(184,134,46,0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 4px 14px;
+  border-radius: 2px;
+  margin-bottom: 22px;
+  opacity: 0;
+  animation: fadeUp .6s ease .1s forwards;
+}
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  max-width: 820px;
+  margin: 0 auto 20px;
+  opacity: 0;
+  animation: fadeUp .7s ease .2s forwards;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-lt);
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.6);
+  max-width: 560px;
+  margin: 0 auto 32px;
+  line-height: 1.8;
+  font-weight: 300;
+  opacity: 0;
+  animation: fadeUp .7s ease .35s forwards;
+}
+.hero-meta {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  opacity: 0;
+  animation: fadeUp .7s ease .45s forwards;
+}
+.hero-meta strong { color: rgba(255,255,255,0.65); font-weight: 400; }
+.hero-line {
+  width: 1px; height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  margin: 28px auto 0;
+  opacity: 0;
+  animation: fadeUp .6s ease .55s forwards;
+}
+
+/* ─── FTC DISCLOSURE ─── */
+.disclosure {
+  max-width: 860px; margin: 0 auto;
+  padding: 12px 5vw;
+  background: var(--gold-bg);
+  border-left: 3px solid var(--gold);
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* ─── CONTENT WRAPPER ─── */
+.content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 5vw 80px;
+}
+
+/* ─── ARTICLE INTRO ─── */
+.article-intro {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.08rem;
+  line-height: 1.95;
+  color: var(--deep);
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--hairline);
+}
+.article-intro p + p { margin-top: 1em; }
+
+/* ─── SECTION HEADER ─── */
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 32px;
+}
+.section-label::before, .section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--hairline);
+}
+.section-label span {
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ─── PRODUCT CARDS ─── */
+.products-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--hairline);
+  padding: 36px 0;
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp .5s ease forwards;
+  text-decoration: none;
+  color: inherit;
+  transition: background .15s;
+}
+.product-card:nth-child(1) { animation-delay: .05s; }
+.product-card:nth-child(2) { animation-delay: .1s; }
+.product-card:nth-child(3) { animation-delay: .15s; }
+.product-card:nth-child(4) { animation-delay: .2s; }
+.product-card:nth-child(5) { animation-delay: .25s; }
+.product-card:nth-child(6) { animation-delay: .3s; }
+.product-card:nth-child(7) { animation-delay: .35s; }
+.product-card:nth-child(8) { animation-delay: .4s; }
+.product-card:nth-child(9) { animation-delay: .45s; }
+.product-card:nth-child(10){ animation-delay: .5s; }
+
+.product-card:hover .product-img-wrap { transform: scale(1.02); }
+.product-card:hover .shop-btn { background: var(--ink); color: var(--gold-lt); }
+
+.product-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--hairline);
+  line-height: 1;
+  padding-right: 28px;
+  padding-top: 4px;
+  min-width: 64px;
+  text-align: right;
+  user-select: none;
+}
+
+.product-body {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.product-img-wrap {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--cream);
+  transition: transform .3s ease;
+  flex-shrink: 0;
+}
+.product-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info { flex: 1; }
+
+.product-tags {
+  display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.tag {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 2px 9px;
+  border-radius: 2px;
+  font-weight: 500;
+}
+.tag-home    { background: #EEF4FF; color: #3B5BA9; }
+.tag-kitchen { background: #FFF0EC; color: #B84A2B; }
+.tag-style   { background: #F0FAF4; color: var(--tag-green); }
+.tag-self    { background: #FCF0FF; color: #7B3FA0; }
+.tag-tech    { background: #F0F9FF; color: #1B6FA8; }
+.tag-deal    { background: var(--gold-bg); color: var(--gold); border: 1px solid var(--gold-lt); }
+
+.product-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.product-title em { font-style: italic; color: var(--gold); }
+
+.product-desc {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.product-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.price-was {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-decoration: line-through;
+  font-weight: 300;
+}
+.shop-btn {
+  display: inline-block;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: var(--cream);
+  color: var(--ink);
+  border: 1px solid var(--hairline);
+  padding: 9px 20px;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background .2s, color .2s, border-color .2s;
+  cursor: pointer;
+}
+.shop-btn:hover { background: var(--ink); color: var(--gold-lt); border-color: var(--ink); }
+.stars {
+  font-size: 0.75rem;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+.star-count { color: var(--muted); font-size: 0.72rem; margin-left: 3px; }
+
+/* ─── CATEGORY FILTER BAR ─── */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--hairline);
+}
+.filter-btn {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: none;
+  border: 1px solid var(--hairline);
+  color: var(--muted);
+  padding: 7px 16px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--ink);
+  color: var(--gold-lt);
+  border-color: var(--ink);
+}
+
+/* ─── NEWSLETTER ─── */
+.newsletter-block {
+  background: var(--ink);
+  border-radius: 4px;
+  padding: 48px 40px;
+  text-align: center;
+  margin: 60px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.newsletter-block::before {
+  content: '';
+  position: absolute; top: -40px; right: -40px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(184,134,46,0.2), transparent 70%);
+}
+.newsletter-block h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.newsletter-block p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 24px;
+}
+.newsletter-form {
+  display: flex;
+  gap: 8px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.newsletter-form input {
+  flex: 1;
+  padding: 11px 16px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 2px;
+  color: #fff;
+  font-size: 0.85rem;
+  font-family: 'Outfit', sans-serif;
+  outline: none;
+  transition: border-color .2s;
+}
+.newsletter-form input::placeholder { color: rgba(255,255,255,0.3); }
+.newsletter-form input:focus { border-color: var(--gold); }
+.newsletter-form button {
+  padding: 11px 22px;
+  background: var(--gold);
+  color: var(--ink);
+  border: none;
+  border-radius: 2px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .2s;
+}
+.newsletter-form button:hover { background: var(--gold-lt); }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--deep);
+  color: rgba(255,255,255,0.4);
+  text-align: center;
+  padding: 36px 5vw;
+  font-size: 0.72rem;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+footer a:hover { color: var(--gold-lt); }
+.footer-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+/* ─── ANIMATIONS ─── */
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── HIDE / SHOW FILTER ─── */
+.product-card.hidden { display: none; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 640px) {
+  .product-body { grid-template-columns: 1fr; }
+  .product-num { font-size: 2.2rem; min-width: auto; padding-right: 16px; }
+  .product-img-wrap { width: 100%; }
+  .nav-cats { display: none; }
+  .newsletter-form { flex-direction: column; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- MASTHEAD -->
+
+<div class="masthead">✦ New Finds Every Week — Curated for Real Homes &amp; Real Life ✦</div>
+
+<!-- NAV -->
+
+<nav>
+  <a href="#" class="nav-brand">The Daily <span>Edit</span></a>
+  <ul class="nav-cats">
+    <li><a href="#" onclick="filterProducts('all')">All Picks</a></li>
+    <li><a href="#" onclick="filterProducts('home')">Home</a></li>
+    <li><a href="#" onclick="filterProducts('kitchen')">Kitchen</a></li>
+    <li><a href="#" onclick="filterProducts('style')">Style</a></li>
+    <li><a href="#" onclick="filterProducts('tech')">Tech</a></li>
+    <li><a href="#" onclick="filterProducts('self')">Self-Care</a></li>
+  </ul>
+  <a class="nav-cta" href="https://www.amazon.com?tag=xrefo-20" target="_blank" rel="noopener">Shop Amazon →</a>
+</nav>
+
+<!-- HERO -->
+
+<header class="hero">
+  <div class="hero-badge">Issue No. 01 — March 2026</div>
+  <h1>The Upgrades That Actually <em>Change</em> How Your Home Feels</h1>
+  <p class="hero-sub">We dug through thousands of Amazon listings so you don't have to. These are the finds that look expensive, feel intentional, and won't empty your wallet.</p>
+  <div class="hero-meta">Curated by the editors · <strong>14 picks this week</strong> · Updated March 16, 2026</div>
+  <div class="hero-line"></div>
+</header>
+
+<!-- FTC DISCLOSURE -->
+
+<div class="disclosure">
+  <strong>Affiliate Disclosure:</strong> The Daily Edit participates in the Amazon Services LLC Associates Program. When you click our links and make a purchase, we may earn a small commission at no extra cost to you. We only recommend products we genuinely believe in — our editorial picks are never paid placements.
+</div>
+
+<!-- MAIN CONTENT -->
+
+<main class="content">
+
+  <!-- INTRO -->
+
+  <div class="article-intro">
+    <p>There's a specific kind of satisfaction in finding a $28 thing that performs like a $200 thing — something that sits on your counter or hangs on your wall and just makes the whole room feel more considered. That's what this list is about.</p>
+    <p>These aren't impulse buys or trend items. They're the kind of products that earn a permanent spot in your home and get pointed out by every guest who visits. We update this list weekly, pulling only the highest-rated, most-reviewed standouts from Amazon.</p>
+  </div>
+
+  <!-- FILTER BAR -->
+
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProducts('all', this)">All Picks</button>
+    <button class="filter-btn" onclick="filterProducts('home', this)">🏠 Home</button>
+    <button class="filter-btn" onclick="filterProducts('kitchen', this)">🍳 Kitchen</button>
+    <button class="filter-btn" onclick="filterProducts('style', this)">👕 Style</button>
+    <button class="filter-btn" onclick="filterProducts('tech', this)">💡 Tech</button>
+    <button class="filter-btn" onclick="filterProducts('self', this)">✨ Self-Care</button>
+  </div>
+
+  <!-- SECTION LABEL -->
+
+  <div class="section-label"><span>This Week's Picks</span></div>
+
+  <!-- PRODUCTS -->
+
+  <div class="products-grid" id="productsGrid">
+
+```
+<!-- 1 -->
+<a class="product-card" data-cat="home" href="https://www.amazon.com/dp/B08HB6RHFH?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">01</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Minimalist wall shelf with books and decor" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-deal">Editor's Pick</span>
+      </div>
+      <div class="product-title">Floating Wall Shelf — <em>The Living Room Upgrade</em></div>
+      <div class="product-desc">This is the one shelf that makes a room look like an interior designer stopped by. Clean-lined, solid wood, holds up to 33lbs without anchors. Reviewers are obsessed — over 12,000 five-star ratings for a reason. Works in every room including the bathroom.</div>
+      <div class="product-footer">
+        <span class="product-price">$34.99</span>
+        <span class="price-was">$49.99</span>
+        <span class="stars">★★★★★</span><span class="star-count">(12,847)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 2 -->
+<a class="product-card" data-cat="kitchen" href="https://www.amazon.com/dp/B00004OCNS?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">02</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=400&q=80" alt="Cast iron skillet on stove" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-kitchen">Kitchen</span>
+        <span class="tag tag-deal">Best Seller</span>
+      </div>
+      <div class="product-title">Lodge Cast Iron Skillet — <em>The Pan You'll Own Forever</em></div>
+      <div class="product-desc">Some tools are heirlooms. This 10.25" Lodge skillet gets better every time you use it, seasons itself with each cook, and works on every surface including induction and open fire. Buy it once. Period.</div>
+      <div class="product-footer">
+        <span class="product-price">$29.99</span>
+        <span class="stars">★★★★★</span><span class="star-count">(64,200+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 3 -->
+<a class="product-card" data-cat="tech" href="https://www.amazon.com/dp/B07PXGQC1Q?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">03</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1558089687-f282ffcbc126?w=400&q=80" alt="Smart LED bulbs warm glow in bedroom" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-tech">Tech</span>
+        <span class="tag tag-deal">Top Rated</span>
+      </div>
+      <div class="product-title">Kasa Smart Bulbs 4-Pack — <em>Instant Ambience, Zero Rewiring</em></div>
+      <div class="product-desc">Changing the lighting in a room is the single highest-ROI home upgrade you can make. These Kasa bulbs connect to WiFi with no hub, dim down to 1%, and shift from daylight to warm amber. Control by voice, app, or schedule. This is how you make a bedroom feel like a boutique hotel.</div>
+      <div class="product-footer">
+        <span class="product-price">$27.99</span>
+        <span class="stars">★★★★☆</span><span class="star-count">(38,500+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 4 -->
+<a class="product-card" data-cat="self" href="https://www.amazon.com/dp/B07C5FLLQY?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">04</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&q=80" alt="Turkish cotton towels folded" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-self">Self-Care</span>
+        <span class="tag tag-home">Home</span>
+      </div>
+      <div class="product-title">Turkish Cotton Bath Towels — <em>The Bathroom Glow-Up</em></div>
+      <div class="product-desc">Nothing signals "I have my life together" quite like towels that feel like the ones at a good hotel. These 100% Turkish cotton sets are thick without being heavy, quick to dry, and get softer with every wash. Get two sets — the before and after difference is genuinely embarrassing.</div>
+      <div class="product-footer">
+        <span class="product-price">$38.99</span>
+        <span class="stars">★★★★★</span><span class="star-count">(9,100+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 5 -->
+<a class="product-card" data-cat="kitchen" href="https://www.amazon.com/dp/B01FXMEF06?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">05</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&q=80" alt="Coffee setup with pour over" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-kitchen">Kitchen</span>
+        <span class="tag tag-deal">Editor's Pick</span>
+      </div>
+      <div class="product-title">Hario V60 Pour Over Set — <em>Your Morning, Elevated</em></div>
+      <div class="product-desc">If you're still using a drip machine, this is your intervention. The Hario V60 is the coffee ritual upgrade that changes your relationship with the morning. Ceramic, heat-stable, and produces a cleaner cup than anything electric in its price range. The process is meditative — think of it as five minutes of mindfulness you actually look forward to.</div>
+      <div class="product-footer">
+        <span class="product-price">$22.00</span>
+        <span class="stars">★★★★★</span><span class="star-count">(7,600+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 6 -->
+<a class="product-card" data-cat="home" href="https://www.amazon.com/dp/B078HJJF2J?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">06</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=400&q=80" alt="Linen bedding in warm neutral tones" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-self">Self-Care</span>
+      </div>
+      <div class="product-title">Linen-Look Duvet Cover — <em>The Bedroom Refresh</em></div>
+      <div class="product-desc">Linen bedding went from a boutique hotel luxury to a mainstream must-have — but the real ones still run $200+. This microfiber set gets the same lived-in, textured look for under $50. Comes in 12 muted, design-conscious colors. One reviewer said it made their room "finally look like a Pinterest board IRL."</div>
+      <div class="product-footer">
+        <span class="product-price">$46.99</span>
+        <span class="price-was">$65.00</span>
+        <span class="stars">★★★★☆</span><span class="star-count">(21,300+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 7 -->
+<a class="product-card" data-cat="style" href="https://www.amazon.com/dp/B07FWBSJH5?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">07</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1556306535-38febf6782e7?w=400&q=80" alt="Minimalist watch strap on wrist" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-style">Style</span>
+        <span class="tag tag-deal">Hidden Gem</span>
+      </div>
+      <div class="product-title">Quick-Release Watch Straps — <em>Refresh Any Watch Instantly</em></div>
+      <div class="product-desc">If you've caught the watch collecting bug, here's the first accessory to grab. Quick-release NATO and leather straps let you change the whole character of a watch in seconds — no tools, no jeweler. A $25 strap on a Seiko 5 will make it look like a completely different watch. This pack covers 20mm, 22mm, and plays nicely with rubber, nato, and leather.</div>
+      <div class="product-footer">
+        <span class="product-price">$18.99</span>
+        <span class="stars">★★★★★</span><span class="star-count">(5,400+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 8 -->
+<a class="product-card" data-cat="home" href="https://www.amazon.com/dp/B01AZLZRJA?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">08</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=400&q=80" alt="Candles and cozy living space" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-self">Self-Care</span>
+      </div>
+      <div class="product-title">LAFCO Capri Candle Dupe — <em>The $8 Room Scent Hack</em></div>
+      <div class="product-desc">Designer candles run $80–$150. This Amazon find burns clean, throws scent across an entire room, and lasts 50+ hours. The trick is layering two complementary scents — cedar + fig, or sandalwood + white tea — to build something that smells intentional, not just "candle-y." Guests will ask where you got it. Tell them what you want.</div>
+      <div class="product-footer">
+        <span class="product-price">$11.49</span>
+        <span class="stars">★★★★☆</span><span class="star-count">(16,700+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 9 -->
+<a class="product-card" data-cat="tech" href="https://www.amazon.com/dp/B09X7CRKRZ?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">09</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&q=80" alt="Desk setup with monitor and organized cables" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-tech">Tech</span>
+        <span class="tag tag-home">Home</span>
+      </div>
+      <div class="product-title">Cable Management Kit — <em>The Setup That Looks Intentional</em></div>
+      <div class="product-desc">Every nice desk is one cable disaster away from looking like a college dorm. This kit — velcro ties, clips, and spine covers — takes 20 minutes to install and makes the whole setup look like you paid someone to do it. Works behind TVs, under desks, and along baseboards. Satisfying project, lasting result.</div>
+      <div class="product-footer">
+        <span class="product-price">$16.99</span>
+        <span class="stars">★★★★★</span><span class="star-count">(28,000+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 10 -->
+<a class="product-card" data-cat="kitchen" href="https://www.amazon.com/dp/B001FB5E2A?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">10</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&q=80" alt="Organized kitchen with spice jars" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-kitchen">Kitchen</span>
+        <span class="tag tag-deal">Best Seller</span>
+      </div>
+      <div class="product-title">OXO Herb Stripper &amp; Multi-Tool — <em>The Prep Game Changer</em></div>
+      <div class="product-desc">Good cooking comes down to repetition and the right tools. This little $10 tool does 6 jobs: strips herbs, zests citrus, removes corn kernels, scrapes boards. It's the kind of thing professional home cooks keep in their knife roll. Stocking stuffer energy, chef-level utility.</div>
+      <div class="product-footer">
+        <span class="product-price">$12.99</span>
+        <span class="stars">★★★★★</span><span class="star-count">(44,100+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 11 -->
+<a class="product-card" data-cat="self" href="https://www.amazon.com/dp/B01MFCWC8Q?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">11</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=400&q=80" alt="Skincare routine on marble surface" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-self">Self-Care</span>
+        <span class="tag tag-deal">Editor's Pick</span>
+      </div>
+      <div class="product-title">CeraVe Hydrating Cleanser — <em>The Dermatologist's Open Secret</em></div>
+      <div class="product-desc">Every $300-a-bottle skincare influencer quietly uses CeraVe. It's the brand dermatologists recommend more than any other, and this cleanser works whether your skin is oily, dry, or somewhere in between. Effective, affordable, and it lasts three months per pump bottle. The best boring upgrade on this list.</div>
+      <div class="product-footer">
+        <span class="product-price">$14.97</span>
+        <span class="stars">★★★★★</span><span class="star-count">(101,000+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 12 -->
+<a class="product-card" data-cat="home" href="https://www.amazon.com/dp/B07VDXTG9X?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">12</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80" alt="Reading nook with throw blanket and lamp" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-home">Home</span>
+        <span class="tag tag-self">Self-Care</span>
+      </div>
+      <div class="product-title">Chunky Knit Throw Blanket — <em>The Piece That Makes a Room</em></div>
+      <div class="product-desc">Interior designers have a saying: every room needs a soft layer. This oversized chunky knit throw does exactly that — draped over a chair or at the foot of a bed, it adds warmth, texture, and intention. Comes in muted tones that photograph beautifully. It's the prop in 30% of Pinterest home photos for a reason.</div>
+      <div class="product-footer">
+        <span class="product-price">$39.99</span>
+        <span class="stars">★★★★☆</span><span class="star-count">(8,200+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 13 -->
+<a class="product-card" data-cat="style" href="https://www.amazon.com/dp/B071ZT3KN9?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">13</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1467043237213-65f2da53396f?w=400&q=80" alt="Leather goods on wood table" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-style">Style</span>
+        <span class="tag tag-deal">Hidden Gem</span>
+      </div>
+      <div class="product-title">Minimalist Bifold Wallet — <em>The Front-Pocket Upgrade</em></div>
+      <div class="product-desc">If your wallet still looks like a George Costanza situation, this is the move. This slim bifold holds 6 cards and a few bills, sits flat in your front pocket, and is made from full-grain leather that develops a patina with use. The kind of wallet that makes you notice everyone else's bulky one.</div>
+      <div class="product-footer">
+        <span class="product-price">$24.95</span>
+        <span class="stars">★★★★★</span><span class="star-count">(3,900+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+<!-- 14 -->
+<a class="product-card" data-cat="kitchen" href="https://www.amazon.com/dp/B000N501BK?tag=xrefo-20" target="_blank" rel="noopener sponsored">
+  <div class="product-num">14</div>
+  <div class="product-body">
+    <div class="product-img-wrap">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80" alt="Beautiful plated food on dinner table" loading="lazy">
+    </div>
+    <div class="product-info">
+      <div class="product-tags">
+        <span class="tag tag-kitchen">Kitchen</span>
+        <span class="tag tag-deal">Best Seller</span>
+      </div>
+      <div class="product-title">Microplane Premium Zester — <em>The $15 Trick Chefs Use</em></div>
+      <div class="product-desc">Restaurant-quality pasta, cocktails, and desserts all have one thing in common: fresh citrus zest. This Microplane is the single most-recommended kitchen tool by professional chefs, cookbook authors, and serious home cooks. Works on lemon, parmesan, nutmeg, ginger, and chocolate. The gift of flavor for the price of a fast food meal.</div>
+      <div class="product-footer">
+        <span class="product-price">$14.99</span>
+        <span class="stars">★★★★★</span><span class="star-count">(52,800+)</span>
+        <span class="shop-btn">Shop on Amazon →</span>
+      </div>
+    </div>
+  </div>
+</a>
+```
+
+  </div><!-- /products-grid -->
+
+  <!-- NEWSLETTER -->
+
+  <div class="newsletter-block">
+    <h3>New Finds Every Friday</h3>
+    <p>The best Amazon discoveries, curated weekly. No filler, no fluff — just the good stuff.</p>
+    <div class="newsletter-form">
+      <input type="email" placeholder="your@email.com">
+      <button type="button" onclick="handleSubscribe(this)">Subscribe</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-brand">The Daily Edit</div>
+  <p>© 2026 The Daily Edit · <a href="#">Privacy Policy</a> · <a href="#">About</a> · <a href="#">Contact</a></p>
+  <p style="margin-top:8px; max-width:600px; margin-left:auto; margin-right:auto;">
+    The Daily Edit is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means to earn fees by linking to Amazon.com. As an Amazon Associate we earn from qualifying purchases.
+  </p>
+</footer>
+
+<script>
+// ── FILTER LOGIC ──────────────────────────────────────────────
+function filterProducts(cat, btn) {
+  const cards = document.querySelectorAll('.product-card');
+  cards.forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+
+  // Update active button state
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+}
+
+// ── NEWSLETTER ────────────────────────────────────────────────
+function handleSubscribe(btn) {
+  const input = btn.previousElementSibling;
+  if (!input.value || !input.value.includes('@')) {
+    input.style.borderColor = '#C0392B';
+    input.focus();
+    return;
+  }
+  btn.textContent = '✓ You\'re In';
+  btn.style.background = '#2D6A4F';
+  input.value = '';
+  input.disabled = true;
+  btn.disabled = true;
+}
+
+// ── SCROLL REVEAL ─────────────────────────────────────────────
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.product-card').forEach(card => {
+    card.style.animationPlayState = 'paused';
+    observer.observe(card);
+  });
+}
+</script>
+
+</body>
+</html>
